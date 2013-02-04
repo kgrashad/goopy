@@ -2,11 +2,15 @@ import service_factory
 from search_service import SearchService, Query, QueryResult
 
 def main():
-    service = service_factory.create_search_service('mock')
+    service = service_factory.create_search_service('google')
 
     query = Query('test')
-    result = service.query(query)
-    print result.link
+    results = service.search(query)
+
+    for result in results:
+        print result.title
+        print result.snippet
+        print
 
 if __name__ == '__main__':
     main()

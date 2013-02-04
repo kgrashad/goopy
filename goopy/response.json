@@ -1,0 +1,285 @@
+{
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "nextPage": [
+   {
+    "title": "Google Custom Search - test",
+    "totalResults": "679000000",
+    "searchTerms": "test",
+    "count": 10,
+    "startIndex": 11,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "017576662512468239146:omuauf_lfve"
+   }
+  ],
+  "request": [
+   {
+    "title": "Google Custom Search - test",
+    "totalResults": "679000000",
+    "searchTerms": "test",
+    "count": 10,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "017576662512468239146:omuauf_lfve"
+   }
+  ]
+ },
+ "context": {
+  "title": "CS Curriculum",
+  "facets": [
+   [
+    {
+     "label": "lectures",
+     "anchor": "Lectures"
+    }
+   ],
+   [
+    {
+     "label": "assignments",
+     "anchor": "Assignments"
+    }
+   ],
+   [
+    {
+     "label": "reference",
+     "anchor": "Reference"
+    }
+   ]
+  ]
+ },
+ "searchInformation": {
+  "searchTime": 0.254127,
+  "formattedSearchTime": "0.25",
+  "totalResults": "679000000",
+  "formattedTotalResults": "679,000,000"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "Homework: Testing Sequence Smooth",
+   "htmlTitle": "Homework: \u003cb\u003eTesting\u003c/b\u003e Sequence Smooth",
+   "link": "http://www.cse.ohio-state.edu/software/2231/web-sw2/assignments/homeworks/smooth-test/smooth-test.html",
+   "displayLink": "www.cse.ohio-state.edu",
+   "snippet": "Make sure you type your answers in a file you bring to the lab so that you will not   have to waste time entering your test cases during the lab. Develop a complete ...",
+   "htmlSnippet": "Make sure you type your answers in a file you bring to the lab so that you will not \u003cbr\u003e  have to waste time entering your \u003cb\u003etest\u003c/b\u003e cases during the lab. Develop a complete \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "44VP-L3AKQYJ",
+   "formattedUrl": "www.cse.ohio-state.edu/software/2231/web...test/smooth-test.html",
+   "htmlFormattedUrl": "www.cse.ohio-state.edu/software/2231/web...\u003cb\u003etest\u003c/b\u003e/smooth-\u003cb\u003etest\u003c/b\u003e.html"
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Regression Test Selection Techniques - Computer Science ...",
+   "htmlTitle": "Regression \u003cb\u003eTest\u003c/b\u003e Selection Techniques - Computer Science \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.cse.ohio-state.edu/~biswass/files/informaticasurvey.pdf",
+   "displayLink": "www.cse.ohio-state.edu",
+   "snippet": "Researchers have proposed a number of regression test selection techniques for   different ... to execute approximately 30,000 functional test cases for a software ...",
+   "htmlSnippet": "Researchers have proposed a number of regression \u003cb\u003etest\u003c/b\u003e selection techniques for \u003cbr\u003e  different \u003cb\u003e...\u003c/b\u003e to execute approximately 30,000 functional \u003cb\u003etest\u003c/b\u003e cases for a software \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "GrD10edpFWoJ",
+   "mime": "application/pdf",
+   "fileFormat": "PDF/Adobe Acrobat",
+   "formattedUrl": "www.cse.ohio-state.edu/~biswass/files/informaticasurvey.pdf",
+   "htmlFormattedUrl": "www.cse.ohio-state.edu/~biswass/files/informaticasurvey.pdf",
+   "pagemap": {
+    "metatags": [
+     {
+      "creator": "Nitro PDF Professional",
+      "moddate": "D:20110922114555-08'00'"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Grades/tests/assignments - Cornell University",
+   "htmlTitle": "Grades/\u003cb\u003etests\u003c/b\u003e/assignments - Cornell University",
+   "link": "http://www.cs.cornell.edu/courses/cs1130/2010fa/gradesexams.html",
+   "displayLink": "www.cs.cornell.edu",
+   "snippet": "There will be two tests. The exams require mastery of the material: you will be   expected to get 85% on each test. If you get lower than 85% on a test, you may ...",
+   "htmlSnippet": "There will be two \u003cb\u003etests\u003c/b\u003e. The exams require mastery of the material: you will be \u003cbr\u003e  expected to get 85% on each \u003cb\u003etest\u003c/b\u003e. If you get lower than 85% on a \u003cb\u003etest\u003c/b\u003e, you may \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "fjSAJnTr0FgJ",
+   "formattedUrl": "www.cs.cornell.edu/courses/cs1130/2010fa/gradesexams.html",
+   "htmlFormattedUrl": "www.cs.cornell.edu/courses/cs1130/2010fa/gradesexams.html",
+   "pagemap": {
+    "cse_image": [
+     {
+      "src": "http://www.cs.cornell.edu/courses/cs1130/2010fa/images/photos/libecafe.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "160",
+      "height": "200",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRZXphnTG-MyzCKTEpYZFyWu0fz7JQkptCZGTbpy_e8deDAOkbFSFaGXdep"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "15869 Homework Assignment 1: Due at the start of class, Thursday ...",
+   "htmlTitle": "15869 Homework Assignment 1: Due at the start of class, Thursday \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.cs.cmu.edu/afs/cs/academic/class/15869-f11/www/assignments/hw1.pdf",
+   "displayLink": "www.cs.cmu.edu",
+   "snippet": "sequence of operations: (I-test,N0), (I-hit,N0), (I-test,N1), (I-hit,N1), (I-test,N2), ... (L  -test,Nx) represents a point-leaf node test against the segment represented by ...",
+   "htmlSnippet": "sequence of operations: (I-\u003cb\u003etest\u003c/b\u003e,N0), (I-hit,N0), (I-\u003cb\u003etest\u003c/b\u003e,N1), (I-hit,N1), (I-\u003cb\u003etest\u003c/b\u003e,N2), \u003cb\u003e...\u003c/b\u003e (L\u003cbr\u003e  -\u003cb\u003etest\u003c/b\u003e,Nx) represents a point-leaf node \u003cb\u003etest\u003c/b\u003e against the segment represented by \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "7_MIdYjm7UAJ",
+   "mime": "application/pdf",
+   "fileFormat": "PDF/Adobe Acrobat",
+   "formattedUrl": "www.cs.cmu.edu/afs/cs/academic/class/15869-f11/www/.../hw1.pdf",
+   "htmlFormattedUrl": "www.cs.cmu.edu/afs/cs/academic/class/15869-f11/www/.../hw1.pdf",
+   "pagemap": {
+    "metatags": [
+     {
+      "title": "assignment1_figure",
+      "author": "Kayvon Fatahalian",
+      "producer": "Mac OS X 10.7.2 Quartz PDFContext",
+      "creator": "Keynote",
+      "creationdate": "D:20111019020914Z00'00'",
+      "moddate": "D:20111019020914Z00'00'"
+     }
+    ]
+   },
+   "labels": [
+    {
+     "name": "assignments",
+     "displayName": "Assignments"
+    }
+   ]
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Neha Agrawal Course: CS 395T Project Topic: Model Checking and ...",
+   "htmlTitle": "Neha Agrawal Course: CS 395T Project Topic: Model Checking and \u003cb\u003e...\u003c/b\u003e",
+   "link": "http://www.cs.utexas.edu/~ragerdl/cs378/grads/neha-agrawal-ProjectProposal.pdf",
+   "displayLink": "www.cs.utexas.edu",
+   "snippet": "Software Model-Checking and Testing are some of the most used techniques to   analyze ... 2) Test generation by formulating coverage criteria as trap properties ...",
+   "htmlSnippet": "Software Model-Checking and \u003cb\u003eTesting\u003c/b\u003e are some of the most used techniques to \u003cbr\u003e  analyze \u003cb\u003e...\u003c/b\u003e 2) \u003cb\u003eTest\u003c/b\u003e generation by formulating coverage criteria as trap properties \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "p-vH-Rwq3PcJ",
+   "mime": "application/pdf",
+   "fileFormat": "PDF/Adobe Acrobat",
+   "formattedUrl": "www.cs.utexas.edu/~ragerdl/cs378/grads/neha-agrawal-ProjectProposal.pdf",
+   "htmlFormattedUrl": "www.cs.utexas.edu/~ragerdl/cs378/grads/neha-agrawal-ProjectProposal.pdf",
+   "pagemap": {
+    "metatags": [
+     {
+      "title": "Microsoft Word - ProjectProposal.doc",
+      "author": "Neha Agrawal",
+      "creator": "Microsoft Word",
+      "producer": "Mac OS X 10.5.4 Quartz PDFContext",
+      "creationdate": "D:20080923025212Z00'00'",
+      "moddate": "D:20080923025212Z00'00'"
+     }
+    ]
+   },
+   "labels": [
+    {
+     "name": "assignments",
+     "displayName": "Assignments"
+    }
+   ]
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Group assignment #2: LCA",
+   "htmlTitle": "Group assignment #2: LCA",
+   "link": "http://www.cs.washington.edu/education/courses/cse403/06su/milestones/LCA/LCA-Assignment.pdf",
+   "displayLink": "www.cs.washington.edu",
+   "snippet": "To propose a staged product delivery plan, including a test plan for the ... [2], we   ask that you prepare a test plan [5] that reflects your vision of what you are going ...",
+   "htmlSnippet": "To propose a staged product delivery plan, including a \u003cb\u003etest\u003c/b\u003e plan for the \u003cb\u003e...\u003c/b\u003e [2], we \u003cbr\u003e  ask that you prepare a \u003cb\u003etest\u003c/b\u003e plan [5] that reflects your vision of what you are going \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "ha1NBgRgXdoJ",
+   "mime": "application/pdf",
+   "fileFormat": "PDF/Adobe Acrobat",
+   "formattedUrl": "www.cs.washington.edu/education/courses/cse403/.../LCA-Assignment.pdf",
+   "htmlFormattedUrl": "www.cs.washington.edu/education/courses/cse403/.../LCA-Assignment.pdf",
+   "pagemap": {
+    "metatags": [
+     {
+      "producer": "GNU Ghostscript 7.07"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "BoxTest (cse331 Homework 3)",
+   "htmlTitle": "BoxTest (cse331 Homework 3)",
+   "link": "http://www.cs.washington.edu/education/courses/cse331/12au/api/hw3/test/BoxTest.html",
+   "displayLink": "www.cs.washington.edu",
+   "snippet": "BoxTest is a glassbox test of the Box class. Recall that like a BallContainer, the   Box is a container for Balls and you can only put a Ball into a Box once. After you ...",
+   "htmlSnippet": "BoxTest is a glassbox \u003cb\u003etest\u003c/b\u003e of the Box class. Recall that like a BallContainer, the \u003cbr\u003e  Box is a container for Balls and you can only put a Ball into a Box once. After you \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "ec2Z583SF_AJ",
+   "formattedUrl": "www.cs.washington.edu/education/courses/.../test/BoxTest.html",
+   "htmlFormattedUrl": "www.cs.washington.edu/education/courses/.../\u003cb\u003etest\u003c/b\u003e/Box\u003cb\u003eTest\u003c/b\u003e.html",
+   "pagemap": {
+    "metatags": [
+     {
+      "date": "2012-10-12"
+     }
+    ]
+   },
+   "labels": [
+    {
+     "name": "assignments",
+     "displayName": "Assignments"
+    }
+   ]
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "CS 4624 Multimedia, Hypertext and Information Access - Pre-test, S96",
+   "htmlTitle": "CS 4624 Multimedia, Hypertext and Information Access - Pre-\u003cb\u003etest\u003c/b\u003e, S96",
+   "link": "http://courses.cs.vt.edu/~cs4624/s97/pretest.html",
+   "displayLink": "courses.cs.vt.edu",
+   "snippet": "CS 4624 Multimedia, Hypertext and Information Access Pre-test, S96. This Pre-  Test Survey should not be printed, or looked at by anyone not starting to take ...",
+   "htmlSnippet": "CS 4624 Multimedia, Hypertext and Information Access Pre-\u003cb\u003etest\u003c/b\u003e, S96. This Pre-\u003cbr\u003e  \u003cb\u003eTest\u003c/b\u003e Survey should not be printed, or looked at by anyone not starting to take \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "Eu_H_66MqnAJ",
+   "formattedUrl": "courses.cs.vt.edu/~cs4624/s97/pretest.html",
+   "htmlFormattedUrl": "courses.cs.vt.edu/~cs4624/s97/pre\u003cb\u003etest\u003c/b\u003e.html"
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "BallContainerTest (cse331 Homework 2)",
+   "htmlTitle": "BallContainerTest (cse331 Homework 2)",
+   "link": "http://www.cs.washington.edu/education/courses/cse331/12sp/api/hw2/test/BallContainerTest.html",
+   "displayLink": "www.cs.washington.edu",
+   "snippet": "BallContainerTest is a glassbox test of the BallContainer class. Recall that the   BallContainer is a container for Balls. However, you can only put a Ball into a ...",
+   "htmlSnippet": "BallContainerTest is a glassbox \u003cb\u003etest\u003c/b\u003e of the BallContainer class. Recall that the \u003cbr\u003e  BallContainer is a container for Balls. However, you can only put a Ball into a \u003cb\u003e...\u003c/b\u003e",
+   "cacheId": "f3_XS7ia-bsJ",
+   "formattedUrl": "www.cs.washington.edu/education/.../test/BallContainerTest.html",
+   "htmlFormattedUrl": "www.cs.washington.edu/education/.../\u003cb\u003etest\u003c/b\u003e/BallContainer\u003cb\u003eTest\u003c/b\u003e.html",
+   "pagemap": {
+    "metatags": [
+     {
+      "date": "2012-04-07"
+     }
+    ]
+   },
+   "labels": [
+    {
+     "name": "assignments",
+     "displayName": "Assignments"
+    }
+   ]
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "CS 180. Fall 2010. Test Out",
+   "htmlTitle": "CS 180. Fall 2010. \u003cb\u003eTest\u003c/b\u003e Out",
+   "link": "http://www.cs.purdue.edu/homes/apm/courses/CS180Fall2011/TestOut.html",
+   "displayLink": "www.cs.purdue.edu",
+   "snippet": "Aug 8, 2011 ... A score of 5 on AP automatically qualifies you to skip CS 180, but you can take   this test if you are unsure whether or not you should skip.",
+   "htmlSnippet": "Aug 8, 2011 \u003cb\u003e...\u003c/b\u003e A score of 5 on AP automatically qualifies you to skip CS 180, but you can take \u003cbr\u003e  this \u003cb\u003etest\u003c/b\u003e if you are unsure whether or not you should skip.",
+   "cacheId": "Akyh5lIrDtUJ",
+   "formattedUrl": "www.cs.purdue.edu/homes/apm/courses/.../TestOut.html",
+   "htmlFormattedUrl": "www.cs.purdue.edu/homes/apm/courses/.../\u003cb\u003eTest\u003c/b\u003eOut.html"
+  }
+ ]
+}
