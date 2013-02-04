@@ -1,8 +1,8 @@
-import service_factory
-from search_service import SearchService, Query, QueryResult
+from services.search_service import SearchService, Query, QueryResult
+import services.service_factory as factory
 
 def main():
-    service = service_factory.create_search_service('google')
+    service = factory.create_search_service('google')
 
     query = Query('test')
     results = service.search(query)

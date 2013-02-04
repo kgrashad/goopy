@@ -13,14 +13,21 @@ GOOGLE_URL = "/customsearch/v1?key=%s&cx=%s&%s"
 class GoogleService(SearchService):
 
     def search(self, query):
-        url = GOOGLE_URL % (API_KEY, SEARCH_ENGINE_ID, urllib.urlencode({'q': query.text}))
-        status, respone = self._mock_get_request(url)
+        url = GOOGLE_URL % (API_KEY, SEARCH_ENGINE_ID, urllib.urlencode({'q': query.keywords}))
+        status, response = self._mock_get_request(url)
+        results = []
 
         if status != 200:
             return QueryResult('Error')
         else:
-            return QueryResult('result')
+            data = json.loads(response)
+            for item in data['items']:
+                results.append(self._parse_result(item))
+        
+        return results
 
+    def _parse_result(self, json_object):
+        return QueryResult(json_object['title'], json_object['link'], json_object['snippet'])
 
     def _do_get_request(self, url):
         connection = httplib.HTTPSConnection(GOOGLE_HOST)
@@ -29,5 +36,5 @@ class GoogleService(SearchService):
         return response.status, response.read()
 
     def _mock_get_request(self, url):
-        data = open('google_response.txt', 'r').read()
+        data = open('services/response.json', 'r').read()
         return 200, data
