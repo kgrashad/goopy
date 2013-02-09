@@ -1,6 +1,8 @@
 from search_service import SearchService, Query, QueryResult
 import json
 import httplib
+import os
+import pickle
 import urllib
 
 # !!! FIX: this should be configurable
@@ -9,12 +11,13 @@ SEARCH_ENGINE_ID = "017576662512468239146:omuauf_lfve"
 
 GOOGLE_HOST = "www.googleapis.com"
 GOOGLE_URL = "/customsearch/v1?key=%s&cx=%s&%s"
+CACHE_FILE = ".cache"
 
 class GoogleService(SearchService):
 
     def search(self, query):
         url = GOOGLE_URL % (API_KEY, SEARCH_ENGINE_ID, urllib.urlencode({'q': query.keywords}))
-        status, response = self._mock_get_request(url)
+        status, response = self._do_get_request(url)
         results = []
 
         if status != 200:
@@ -23,11 +26,26 @@ class GoogleService(SearchService):
             data = json.loads(response)
             for item in data['items']:
                 results.append(self._parse_result(item))
+
+        cache = open(CACHE_FILE, "w")
+        pickle.dump(results, cache)
         
         return results
 
+    def get_latest_results(self):
+        if not os.path.exists(CACHE_FILE):
+            return None
+
+        cache = open(CACHE_FILE, "r")
+
+        return pickle.load(cache)
+
     def _parse_result(self, json_object):
-        return QueryResult(json_object['title'], json_object['link'], json_object['snippet'])
+        return QueryResult(
+            json_object['title'],
+            json_object['link'],
+            json_object['displayLink'],
+            json_object['snippet'])
 
     def _do_get_request(self, url):
         connection = httplib.HTTPSConnection(GOOGLE_HOST)
