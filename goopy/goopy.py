@@ -22,7 +22,6 @@ def main():
             output.print_result(results[resultnum - 1])
         else:
             print "No results found"
-
     else:
         query = Query(args.query)
         results = service.search(query)
