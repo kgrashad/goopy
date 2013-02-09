@@ -10,7 +10,7 @@ API_KEY = "AIzaSyDxTFivVL_Ly5QTRPK8FeNk9sxN8S35tT0"
 SEARCH_ENGINE_ID = "017576662512468239146:omuauf_lfve"
 
 GOOGLE_HOST = "www.googleapis.com"
-GOOGLE_URL = "/customsearch/v1?key=%s&cx=%s&%s"
+GOOGLE_URL = "/customsearch/v1?prettyPrint=false&key=%s&cx=%s&%s"
 CACHE_FILE = ".cache"
 
 class GoogleService(SearchService):
@@ -24,8 +24,11 @@ class GoogleService(SearchService):
             return QueryResult('Error')
         else:
             data = json.loads(response)
-            for item in data['items']:
+            for item in data['items'][:self.config.max_results]:
                 results.append(self._parse_result(item))
+
+        if os.path.exists(CACHE_FILE):
+            os.remove(CACHE_FILE)
 
         cache = open(CACHE_FILE, "w")
         pickle.dump(results, cache)
@@ -52,7 +55,3 @@ class GoogleService(SearchService):
         connection.request("GET", url)
         response = connection.getresponse()
         return response.status, response.read()
-
-    def _mock_get_request(self, url):
-        data = open('services/response.json', 'r').read()
-        return 200, data

@@ -2,18 +2,22 @@ class Query(object):
     """Represents a query."""
     def __init__(self, keywords):
         self.keywords = keywords
-        
+
 
 class QueryResult(object):
     """Represents a query result."""
     def __init__(self, title, link, display_link, snippet):
         self.title = title
         self.link = link
-        self.display_link = link
+        self.display_link = display_link
         self.snippet = snippet
 
 
 class SearchService(object):
+
+    def __init__(self, config):
+        self.config = config
+        
     """Abstract class representing a search service."""
     def search(self, Query):
         """Performs a search on the specified query and return list of results."""

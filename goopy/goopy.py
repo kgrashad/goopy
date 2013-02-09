@@ -1,12 +1,14 @@
 from services.search_service import SearchService, Query, QueryResult
 import argparse
+import json
 import output
+import os
 import services.service_factory as factory
 
 def main():
     args = _parse_args()
 
-    service = factory.create_search_service(args.engine)
+    service = factory.create_search_service(args.engine, Config())
 
     resultnum = try_get_number(args.query)
 
@@ -30,7 +32,7 @@ def _parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('query', nargs="?", help='enter the query you want to search')
     parser.add_argument("-e", "--engine", default="google", help="Engine to use")
-    parser.add_argument("-l", "--last-query", action="store_false", help="print last query again")
+    parser.add_argument("-l", "--last-query", action="store_true", help="print last query again")
     args = parser.parse_args()
     return args 
 
@@ -39,6 +41,15 @@ def try_get_number(s):
         return int(s)
     except (TypeError, ValueError):
         return None
+
+
+class Config(object):
+    def __init__(self):
+        if os.path.exists("config.json"):
+            self.__dict__ = json.load(open("config.json", "r"))
+        else:
+            self.max_results = 5
+            json.dump(self.__dict__, open("config.json", "w"))
 
 if __name__ == '__main__':
     main()
