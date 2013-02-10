@@ -44,11 +44,21 @@ def try_get_number(s):
 
 class Config(object):
     def __init__(self):
-        if os.path.exists("config.json"):
-            self.__dict__ = json.load(open("config.json", "r"))
+        if os.path.exists("config-dev.json"):
+            self.load_and_validate("config-dev.json")
+        elif os.path.exists("config.json"):
+            self.load_and_validate("config.json")
         else:
-            self.max_results = 5
-            json.dump(self.__dict__, open("config.json", "w"))
+            raise IOError("Config.json file is missing")
+
+    def load_and_validate(self, filename):
+        self.__dict__ = json.load(open(filename, "r"))
+
+        if self.google_api_key == None:
+            raise ValueError("google_api_key is missing")
+
+        if self.google_engine_id == None:
+            raise ValueError("google_engine_id is missing")
 
 if __name__ == '__main__':
     main()

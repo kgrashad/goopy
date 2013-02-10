@@ -1,4 +1,4 @@
 *.pyc
-config.json
+config-dev.json
 .DS_Store
 .cache

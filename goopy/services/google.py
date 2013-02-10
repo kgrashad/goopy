@@ -5,10 +5,6 @@ import os
 import pickle
 import urllib
 
-# !!! FIX: this should be configurable
-API_KEY = "AIzaSyDxTFivVL_Ly5QTRPK8FeNk9sxN8S35tT0"
-SEARCH_ENGINE_ID = "017576662512468239146:omuauf_lfve"
-
 GOOGLE_HOST = "www.googleapis.com"
 GOOGLE_URL = "/customsearch/v1?prettyPrint=false&key=%s&cx=%s&%s"
 CACHE_FILE = ".cache"
@@ -16,8 +12,12 @@ CACHE_FILE = ".cache"
 class GoogleService(SearchService):
 
     def search(self, query):
-        url = GOOGLE_URL % (API_KEY, SEARCH_ENGINE_ID, urllib.urlencode({'q': query.keywords}))
+        url = GOOGLE_URL % (self.config.google_api_key, 
+            self.config.google_engine_id, 
+            urllib.urlencode({'q': query.keywords}))
+
         status, response = self._do_get_request(url)
+        
         results = []
 
         if status != 200:
@@ -59,9 +59,6 @@ class GoogleService(SearchService):
 class MockGoogleService(GoogleService):
     """MockService that loads the response from respons.json.
     This service is mainly for testing purposes"""
-
-    def __init__(self, config):
-        super(config)
 
     def _do_get_request(self, url):
         data = open('services/response.json', 'r').read()
