@@ -1,14 +1,14 @@
-from services.search_service import SearchService, Query, QueryResult
+from services.service import SearchService, Query, QueryResult
 import argparse
 import json
 import output
 import os
-import services.service_factory as factory
+import services.factory
 
 def main():
     args = _parse_args()
 
-    service = factory.create_search_service(args.engine, Config())
+    service = services.factory.create(args.engine, Config())
 
     resultnum = try_get_number(args.query)
 

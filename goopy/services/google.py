@@ -1,4 +1,4 @@
-from search_service import SearchService, Query, QueryResult
+from service import SearchService, Query, QueryResult
 import json
 import httplib
 import os
@@ -55,3 +55,14 @@ class GoogleService(SearchService):
         connection.request("GET", url)
         response = connection.getresponse()
         return response.status, response.read()
+
+class MockGoogleService(GoogleService):
+    """MockService that loads the response from respons.json.
+    This service is mainly for testing purposes"""
+
+    def __init__(self, config):
+        super(config)
+
+    def _do_get_request(self, url):
+        data = open('services/response.json', 'r').read()
+        return 200, data
